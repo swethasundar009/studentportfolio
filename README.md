@@ -310,6 +310,22 @@ Open your web browser and navigate to http://localhost:3000 to view the website 
 
 Submitted contact form data will be stored in the MongoDB Compass database.
 
+## Usage
+
+- **Navigate Through the Site:** Use the navigation menu to explore different sections of the website including Home, About, Portfolio, and Contact.
+- **View Contact Information:** Go to the Contact section to see the contact form and enter your information to send a message.
+- **Submit Form Data:** Fill out the contact form with your name, email, and message, then submit it to store the data in the MongoDB Compass database.
+
+## Contributing
+
+If you would like to contribute to this project, please fork the repository and submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
 
 ![project 1](https://github.com/user-attachments/assets/c8a767e1-3d64-4e39-8bb2-6caa9473063d)
 ![project2](https://github.com/user-attachments/assets/c5a668a2-bea6-42af-a985-084787b43e1f)
