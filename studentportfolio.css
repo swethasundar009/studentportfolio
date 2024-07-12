@@ -1,0 +1,286 @@
+/* Reset and general styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: White Smoke; /* Light background color */
+  color: Dark charcoal; /* Dark text color */
+}
+
+/* Header Navbar Styles */
+.custom-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333; /* Dark background color */
+  padding: 1rem 5rem;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.custom-logo .custom-logo-heading {
+  color: white;
+}
+
+/* Style for the hamburger menu icon */
+.custom-hamburger {
+  color: #fff; /* Color of the hamburger icon */
+  font-size: 25px; /* Size of the hamburger icon */
+  cursor: pointer; /* Change cursor to pointer when hovered over */
+  z-index: 1001; /* Ensure it is above other content */
+}
+
+/* Responsive styling for the hamburger menu icon */
+@media (max-width: 768px) {
+  .custom-hamburger {
+    display: block; /* Show hamburger icon on smaller screens */
+  }
+
+  .custom-menu {
+    position: absolute; /* Position menu absolutely */
+    top: 100%; /* Place menu below the navbar */
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Same background color as navbar */
+    display: none; /* Hide menu by default */
+    flex-direction: column; /* Stack menu items vertically */
+    text-align: center; /* Center text in menu items */
+  }
+
+  .custom-menu.active {
+    display: flex; /* Show menu when active */
+  }
+
+  .custom-menu-list {
+    flex-direction: column; /* Stack menu items vertically */
+  }
+
+  .custom-menu-list-item {
+    padding: 1rem 0; /* Add padding to menu items */
+  }
+}
+
+.custom-menu {
+  display: flex;
+  align-items: center;
+}
+
+.custom-menu .custom-menu-list {
+  display: flex;
+  list-style: none;
+}
+
+.custom-links {
+  color: white;
+}
+
+.custom-menu-list .custom-menu-list-item {
+  padding: 0 1rem;
+}
+
+/* Main Hero Section Styles */
+.custom-hero {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff; /* Text color for hero section */
+  margin-top: 80px; /* Adjust to accommodate fixed navbar */
+  padding: 0 1rem; /* Adjust padding as needed */
+}
+
+.custom-hero .custom-hero-content {
+  max-width: 600px;
+  text-align: center;
+}
+
+.custom-hero .custom-hero-heading {
+  color: black;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.custom-hero .custom-hero-text {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.custom-hero-text{
+  color: black;
+}
+
+/* About section styles */
+.custom-about {
+  padding: 4rem 1rem;
+  background-color: #fff; /* Light background color */
+  color: #333; /* Text color for about section */
+}
+
+.custom-about .custom-about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.custom-about .custom-section-heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.custom-section-heading {
+  padding-bottom: 1rem;
+}
+
+.custom-about .custom-section-text {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Portfolio section styles */
+
+p {
+  padding: 20px;
+}
+.custom-portfolio {
+  padding: 4rem 1rem;
+  background-color: #f4f4f4; /* Light background color */
+}
+
+.custom-portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.custom-portfolio-item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.HCJS {
+  display: inline-block;
+  width: 100%;
+  height: 280px;
+  object-fit: fill;
+}
+
+.flutter {
+  display: inline-block;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.python {
+  display: inline-block;
+  width: 100%;
+  height: 280px;
+  border-radius: none;
+  object-fit: fill;
+  overflow-inline: hidden;
+}
+
+.custom-portfolio-item .custom-portfolio-title {
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #333; /* Dark background color */
+  color: #fff; /* Text color */
+}
+
+/* Contact section styles */
+.custom-contact {
+  padding: 4rem 1rem;
+  background-color: #fff; /* Light background color */
+  color: #333; /* Text color for contact section */
+}
+
+.custom-contact .custom-contact-content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.custom-contact .custom-section-heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.custom-contact .custom-section-text {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.custom-contact-form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.custom-contact-form .custom-form-control {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.custom-contact-form .custom-btn {
+  width: 100%;
+  max-width: 200px;
+}
+
+.custom-btn {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 2px;
+}
+
+/* Footer */
+.custom-footer {
+  padding: 2rem 1rem;
+  background-color: #333; /* Dark background color */
+  color: #fff; /* Text color for footer */
+  text-align: center;
+}
+
+.custom-footer .custom-footer-content
+{
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.custom-footer .custom-social-links {
+  margin-top: 1rem;
+}
+
+.custom-social-icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #fff; /* White background color for social icons */
+  color: #333; /* Text color for social icons */
+}
+

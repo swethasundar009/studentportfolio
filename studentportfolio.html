@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portfolio Site</title>
+    <link rel="stylesheet" href="studentportfolio.css">
+</head>
+<body>
+    <!-- Header Navbar -->
+    <header class="custom-navbar">
+        <div class="custom-logo">
+            <img class="logo" src="Images/Logo.jpg" alt="Logo">
+        </div>
+        <nav class="custom-menu">
+            <ul class="custom-menu-list">
+                <li class="custom-menu-list-item"><a href="#" class="custom-links">Home</a></li>
+                <li class="custom-menu-list-item"><a href="#about" class="custom-links">About</a></li>
+                <li class="custom-menu-list-item"><a href="#portfolio" class="custom-links">Portfolio</a></li>
+                <li class="custom-menu-list-item"><a href="#contact" class="custom-links">Contact</a></li>
+            </ul>
+            <div class="custom-hamburger">&#9776;</div>
+        </nav>
+    </header>
+
+    <!-- Main Hero Section -->
+    <section class="custom-hero">
+        <div class="custom-hero-content">
+            <h1 class="custom-hero-heading">Discover Your Potential</h1>
+            <p class="custom-hero-text">We create solutions that make a difference</p>
+            <a href="#" class="custom-btn">Get Started</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="custom-about">
+        <div class="custom-about-content">
+            <h2 class="custom-section-heading">About Us</h2>
+            <p class="custom-section-text">
+                At Prince William Academy, we are dedicated to cultivating well-rounded individuals who excel not only academically but also as leaders and contributors to their communities. Founded with the vision of empowering students to build their projects, develop essential skills, and secure placements in reputable companies, we prepare our students to thrive in a competitive and dynamic world. Through our comprehensive programs and supportive environment, we instill a passion for learning, innovation, and service, ensuring that every student reaches their full potential and makes a positive impact in society.
+            </p>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="custom-portfolio">
+        <h2 class="custom-section-heading">Projects</h2>
+        <div class="custom-portfolio-grid">
+            <div class="custom-portfolio-item">
+                <img class="HCJS" src="Images/html,css,js.png" alt="Portfolio Item">
+                <h3 class="custom-portfolio-title">Interactive Web Design Project</h3>
+                <p>Developed a dynamic website using HTML, CSS, and JavaScript to showcase interactive features and responsive design principles.</p>
+            </div>
+            <div class="custom-portfolio-item">
+                <img class="flutter" src="Images/Flutter.jpg" alt="Portfolio Item">
+                <h3 class="custom-portfolio-title">Mobile App Development</h3>
+                <p>Designed and implemented a mobile application using Flutter/Dart, focusing on user interface design and integration with backend services.</p>
+            </div>
+            <div class="custom-portfolio-item">
+                <img class="python" src="Images/python.png" alt="Portfolio Item">
+                <h3 class="custom-portfolio-title">Machine Learning Model</h3>
+                <p>Built a predictive model in Python using scikit-learn, applying regression/classification techniques to analyze and predict trends in a chosen dataset.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+<section id="contact" class="custom-contact">
+    <div class="custom-contact-content">
+        <h2 class="custom-section-heading">Contact Us</h2>
+        <p class="custom-section-text">Get in touch with us to start your project today.</p>
+        <form class="custom-contact-form" action="/post" method="POST">
+            <input type="text" class="custom-form-control" name="name" placeholder="Your Name" required>
+            <input type="email" class="custom-form-control" name="email" placeholder="Your Email" required>
+            <textarea class="custom-form-control" name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="custom-btn">Send Message</button>
+        </form>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="custom-footer">
+        <div class="custom-footer-content">
+            <p>&copy; 2024 Prince William Academy. All rights reserved.</p>
+            <div class="custom-social-links">
+                <a href="#" class="custom-social-icon">FB</a>
+                <a href="#" class="custom-social-icon">TW</a>
+                <a href="#" class="custom-social-icon">IG</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- JavaScript Code -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('.custom-contact-form');
+    
+            form.addEventListener('submit', async function(event) {
+                event.preventDefault();
+    
+                if (validateForm()) {
+                    const formData = {
+                        name: form.querySelector('input[type="text"]').value,
+                        email: form.querySelector('input[type="email"]').value,
+                        message: form.querySelector('textarea').value
+                    };
+    
+                    try {
+                        const response = await fetch('/post', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(formData)
+                        });
+    
+                        const data = await response.json();
+                        console.log('Form submission successful:', data);
+                        alert('Form submission successful');
+                        form.reset();
+                    } catch (error) {
+                        console.error('Error submitting form:', error);
+                        alert('Form submission failed');
+                    }
+                }
+            });
+    
+            function validateForm() {
+                const name = form.querySelector('input[type="text"]').value.trim();
+                const email = form.querySelector('input[type="email"]').value.trim();
+                const message = form.querySelector('textarea').value.trim();
+    
+                if (name === '' || email === '' || message === '') {
+                    alert('Please fill in all fields');
+                    return false;
+                }
+    
+                if (!isValidEmail(email)) {
+                    alert('Please enter a valid email address');
+                    return false;
+                }
+    
+                return true;
+            }
+    
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+        });
+    </script>
+    
+</body>
+</html>

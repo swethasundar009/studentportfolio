@@ -1,0 +1,78 @@
+/* Responsive styling for the hamburger menu icon */
+@media (max-width: 768px) {
+  .custom-hamburger {
+    display: block; /* Show hamburger icon on smaller screens */
+  }
+
+  .custom-menu {
+    position: absolute; /* Position menu absolutely */
+    top: 100%; /* Place menu below the navbar */
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Same background color as navbar */
+    display: none; /* Hide menu by default */
+    flex-direction: column; /* Stack menu items vertically */
+    text-align: center; /* Center text in menu items */
+  }
+
+  .custom-menu.active {
+    display: flex; /* Show menu when active */
+  }
+
+  .custom-menu-list {
+    flex-direction: row; /* Stack menu items vertically */
+  }
+
+  .custom-menu-list-item {
+    padding: 1rem 0; /* Add padding to menu items */
+  }
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .custom-navbar {
+    padding: 1rem 2rem;
+  }
+
+  .custom-hero {
+    padding: 0 1rem;
+  }
+
+  .custom-about {
+    padding: 3rem 1rem;
+  }
+
+  .custom-portfolio {
+    padding: 3rem 1rem;
+  }
+
+  .custom-contact {
+    padding: 3rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-hero .custom-hero-heading {
+    font-size: 2rem;
+  }
+
+  .custom-hero .custom-hero-text {
+    font-size: 1rem;
+  }
+
+  .custom-about .custom-section-heading {
+    font-size: 1.5rem;
+  }
+
+  .custom-about .custom-section-text {
+    font-size: 0.875rem;
+  }
+
+  .custom-contact .custom-section-heading {
+    font-size: 1.5rem;
+  }
+
+  .custom-contact .custom-section-text {
+    font-size: 0.875rem;
+  }
+}
