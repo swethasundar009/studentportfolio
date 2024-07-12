@@ -279,21 +279,21 @@ code
 
 ```
 {
-  "name": "student-portfolio-site",
+  "name": "student-portfolio",
   "version": "1.0.0",
-  "description": "A static website template for a student portfolio",
+  "description": "A responsive student portfolio website template with backend using Node.js, Express, and MongoDB",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "mongoose": "^5.12.3",
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.0",
     "path": "^0.12.7"
   },
   "author": "Swetha Sundar",
-  "license": "MIT"
+  "license": "MIT",
 }
 ```
 
